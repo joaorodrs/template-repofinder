@@ -1,8 +1,8 @@
 import React, { lazy } from 'react';
 
 // Icons
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import PeopleIcon from '@material-ui/icons/People';
+import MainReposIcon from '@material-ui/icons/Star';
+import AllReposIcon from '@material-ui/icons/List';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
 // Pages
@@ -31,16 +31,16 @@ const config = {
     {
       path: '/',
       component: Dashboard,
-      title: 'Dashboard',
+      title: 'Principal',
       exact: true,
-      icon: <DashboardIcon />,
+      icon: <MainReposIcon />,
     },
     {
       path: '/users',
       component: Users,
-      title: 'Usuários',
+      title: 'Todos',
       exact: true,
-      icon: <PeopleIcon />,
+      icon: <AllReposIcon />,
     },
     {
       path: '/profile',

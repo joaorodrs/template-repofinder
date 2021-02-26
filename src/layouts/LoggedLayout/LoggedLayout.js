@@ -13,7 +13,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { useTheme } from '@material-ui/core/styles';
-import Inovando from 'images/inovando-horizontal.svg';
+import RepoFinder from 'images/repo-finder.png';
 import ListItemLink from 'components/ListItemLink';
 import { useAuth } from 'contexts/auth';
 import { useLocation, matchPath, Redirect, useHistory } from 'react-router-dom';
@@ -55,8 +55,8 @@ function LoggedLayout(props) {
         <img
           draggable={false}
           style={{ height: 35 }}
-          src={Inovando}
-          alt="Inovando's Logo"
+          src={RepoFinder}
+          alt="RepoFinder"
         />
       </div>
       <Divider />
@@ -102,7 +102,7 @@ function LoggedLayout(props) {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
+        <Toolbar style={{ background: 'black' }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
