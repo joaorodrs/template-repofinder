@@ -102,7 +102,7 @@ function LoggedLayout(props) {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar style={{ background: 'black' }}>
+        <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Inovando from 'images/inovando.svg';
+import RepoFinder from 'images/repo-finder.png';
 import Centered from 'components/Centered';
 import LoginForm from 'forms/LoginForm';
 import { FormContainer } from 'styles/global';
@@ -23,8 +23,8 @@ function Login() {
       <img
         draggable={false}
         style={{ width: 200, marginBottom: 20 }}
-        src={Inovando}
-        alt="Inovando's Logo"
+        src={RepoFinder}
+        alt="RepoFinder"
       />
       <FormContainer>
         <LoginForm onSubmit={onSubmit} />
