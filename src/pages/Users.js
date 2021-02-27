@@ -20,7 +20,7 @@ const columns = [
 function Users() {
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState({});
-  const { onRefresh, ...dataTableProps } = useTable('users', {
+  const { onRefresh, ...dataTableProps } = useTable('users/joaorodrs/repos', {
     onRowClick,
   });
 

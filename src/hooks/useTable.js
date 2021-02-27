@@ -18,13 +18,13 @@ function useTable(endpoint, options) {
       setLoading(true);
     }, 1000);
 
-    const common = { _limit: rowsPerPage, _page: page, q: search };
-    const params = sort ? { ...common, _sort: sort, _order: order } : common;
+    // const common = { _limit: rowsPerPage, _page: page, q: search };
+    // const params = sort ? { ...common, _sort: sort, _order: order } : common;
 
     try {
-      const response = await api.get(endpoint, { params });
+      const response = await api.get(endpoint);
       setData(response.data);
-      setCount(parseInt(response.headers['x-total-count'], 10));
+      setCount(95);
     } finally {
       // only shows loading if response from server
       // takes more than 1 second

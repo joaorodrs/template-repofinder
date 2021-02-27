@@ -29,20 +29,19 @@ export const AuthProvider = ({ children }) => {
           return response;
         },
         function(error) {
+          // if (error?.response?.status === 401) {
+          //   const signed = !!localStorage.getItem('@token');
+          //   if (signed) {
+          //     toast.error('Sua sessão expirou, logue novamente.');
+          //     signOut();
+          //   } else {
+          //     if (error.response.config.url.includes('login')) {
+          //       toast.error('Credenciais inválidas');
+          //     }
+          //   }
+          // }
+
           if (error?.response?.status === 401) {
-            const signed = !!localStorage.getItem('@token');
-
-            if (signed) {
-              toast.error('Sua sessão expirou, logue novamente.');
-              signOut();
-            } else {
-              if (error.response.config.url.includes('login')) {
-                toast.error('Credenciais inválidas');
-              }
-            }
-          }
-
-          if (error?.response?.status !== 401) {
             toast.error(
               'Ops… ocorreu uma falha na sua requisição, tente novamente em instantes.',
             );
@@ -58,7 +57,7 @@ export const AuthProvider = ({ children }) => {
       const storagedToken = localStorage.getItem('@token');
 
       if (storagedUser && storagedToken) {
-        api.defaults.headers.Authorization = `Bearer ${storagedToken}`;
+        // api.defaults.headers.Authorization = `Bearer ${storagedToken}`;
         setUser(JSON.parse(storagedUser));
       }
       setLoading(false);
@@ -73,7 +72,7 @@ export const AuthProvider = ({ children }) => {
 
     setUser(response.user);
 
-    api.defaults.headers.Authorization = `Bearer ${response.token}`;
+    // api.defaults.headers.Authorization = `Bearer ${response.token}`;
 
     localStorage.setItem('@user', JSON.stringify(response.user));
     localStorage.setItem('@token', response.token);
