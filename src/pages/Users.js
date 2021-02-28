@@ -9,7 +9,7 @@ import api from 'services/api';
 const columns = [
   {
     name: 'name',
-    label: 'Nome',
+    label: 'Repositório',
   },
   {
     name: 'language',
