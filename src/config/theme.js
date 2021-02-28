@@ -17,7 +17,7 @@ const theme = createMuiTheme({
   palette: {
     primary: {
       main: '#000',
-      dark: '#000', // hover
+      dark: '#111', // hover
       contrastText: '#fff',
     },
   },

@@ -12,8 +12,16 @@ const columns = [
     label: 'Nome',
   },
   {
-    name: 'lastname',
-    label: 'Sobrenome',
+    name: 'language',
+    label: 'Linguagem',
+  },
+  {
+    name: 'ssh_url',
+    label: 'SSH',
+  },
+  {
+    name: 'stargazers_count',
+    label: 'Stars',
   },
 ];
 
